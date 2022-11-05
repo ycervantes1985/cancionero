@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CancionForm from '../components/CancionForm';
 import { simplePost } from '../services/simplePost';
 import { simpleGet } from '../services/simpleGet'
+import { Link } from "react-router-dom";
 
 const Main = () => {
 
@@ -47,7 +48,7 @@ const Main = () => {
                 <tbody>
                     {canciones?.map((cancion)=>
                     <tr key= {cancion._id}>
-                        <th scope="row"> {cancion.nombre} </th>
+                        <th scope="row"> <Link to={`/cancion/${cancion._id}`}>{cancion.nombre} </Link></th>
                         <td> {cancion.artista} </td>
                         <td> {cancion.compositores} </td>
                     </tr>
