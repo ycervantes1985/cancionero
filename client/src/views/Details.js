@@ -20,6 +20,8 @@ const Details = () => {
     }, []);
 
 
+    
+
     return (
         <div>
             <h2>Nombre de la cancion : {cancion?.nombre}</h2>

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Details from './views/Details';
 import Main from './views/Main';
+import Update from './views/Update';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main/>}/>
         <Route path='/cancion/:id' element={<Details/>}/>
+        <Route path='/cancion/update/:id' element={<Update/>}/>
       </Routes>
       
     </div>

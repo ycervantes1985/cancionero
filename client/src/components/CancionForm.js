@@ -4,7 +4,7 @@ import { Field, Formik, Form} from 'formik';
 
 
 const CancionForm = (props) => {
-    const {nombre,artista,compositor1,compositor2,compositor3, onSubmitProp} = props
+    const {nombre,artista,compositor1,compositor2,compositor3, onSubmitProp, action} = props
 
     return (
         <div>
@@ -57,7 +57,7 @@ const CancionForm = (props) => {
                         <Field id="compositor3" type="text" placeholder="compositor 3" name="compositor3" className="form-control"/>
                         {errors.compositor3 && touched.compositor3 && <p>{errors.compositor3}</p>}
 
-                        <button type="submit" disabled={Object.values(errors).length>0 || Object.values(touched).length===0} >ENVIAR</button>
+                        <button type="submit" disabled={Object.values(errors).length>0 || Object.values(touched).length===0} >{action}</button>
                     </Form>
                 </div>)
             }}
